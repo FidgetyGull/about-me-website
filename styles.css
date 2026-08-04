@@ -1,0 +1,85 @@
+
+body {
+  margin: 0;
+  background-color: lightblue;
+}
+
+.info-cards {
+  max-width: 1000px;
+  margin: 40px auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.main-body {
+  position: relative;
+  background-color: beige;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  max-width: 70%;
+  min-width: 70%;
+  font-family: "Google Sans Code", monospace, Georiga, 'Times New Roman', Times, serif;
+}
+
+.main-body h1 {
+  text-align: center;
+  color: grey;
+}
+
+.main-body h2 {
+  color: coral;
+}
+
+.main-body p {
+  margin: 5px;
+}
+
+a.link {
+  text-decoration: none;
+  color: green;
+}
+
+a.link:visited {
+  color: blue;
+}
+
+a.link:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.contact-ico {
+  vertical-align: middle;
+}
+
+/* Temporary styles */
+#maint-notice {
+  background-color: rgb(255, 147, 147);
+}
+
+#maint-notice h1 {
+  color: rgb(255, 43, 43)
+}
+
+.close-btn {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+  padding: 5px;
+  position: absolute;
+  top: 0px;
+  right: 10px;
+}
+
+.close-btn:hover {
+  opacity: 0.7;
+}
+
+#maint-notice.hidden {
+  display: none !important;
+}

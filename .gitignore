@@ -1,3 +1,9 @@
 # VS Code
 .vscode/
 .git/
+
+# hidden webpages
+logs/
+robots.txt
+page/
+redirect/

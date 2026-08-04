@@ -1,0 +1,106 @@
+<html lang="en">
+<head>
+    <!--Utilizing google fonts for monospace code font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" href="/assets/home.svg" type="image/svg+xml">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <title>Homepage</title>
+</head>
+<body>
+    <div class="info-cards">
+
+    <section id="maint-notice" class="main-body">
+        <button class="close-btn">&times;</button>
+        <div class="content">
+            <h1>Hi There!</h1>
+            <p>
+                This website is going under a lot of maintenance and changes. At any time, things might break or be changed. Check 
+                back frequently to see changes! If you find any problems, feel free to contact me. NOTE: If the website appears 
+                broken, try emptying browser cache. (windows: ctrl+shift+delete -> check cached images and files -> delete)
+            </p>
+        </div>
+    </section>
+
+    <section id="hello-world" class="main-body">
+        <h1>Hello!</h1>
+        <main>
+        <p>Hi, I'm Brian Borbath! Welcome to my webpage. Feel free to check by at any
+            time for update content. There won't be any ads!
+        </p>
+    </main>
+        <section id="contact-list">
+            <h2>Contacts</h2>
+            <p style="line-height: 30px;">
+                <img class="contact-ico" src="/assets/email.png" height="25" width="25">
+                Email: <a class="link" href="mailto:brian.borbath@gmail.com">brian.borbath@gmail.com</a><br>
+                <img class="contact-ico" src="/assets/in-logo.png" height="25" width="25">
+                LinkedIn: <a class="link" href="/redirect?id=to-linkedlin&dest=https://www.linkedin.com/in/brian-borbath-7a1637389/" target="_blank" rel="noopener noreferrer">Here</a><br>
+                <img class="contact-ico" src="/assets/location.png" height="25" width="25"> Viera, FL
+            </p>
+        </section>
+    </section>
+
+
+    <section id="about-me" class="main-body">
+        <h1>About Me</h1>
+        <p>I'm an aspiring electrical engineer. I am currently a senior at Viera High School,
+            graduating in May 2026 as a National Merit Finalist and Principal's scholar. I enjoy tinkering with homelab programs and messing
+            around with AI agents.
+        </p>
+        <p>
+            I participate in <a class="link" href="https://gocivilairpatrol.org" ref="noopener noreferrer" target="_blank">Civil Air Patrol</a> as the Deputy Commander, a
+            volunteer organization focused on leadership, emergency services, character development, and aerospace. Squadron FL-239 by PSFB.
+        </p>
+        <p>
+            In school, I am a member of Mu Alpha Theta (math honors society) and NHS, as well as the Viera marching band.
+
+        </p>
+    </section>
+
+    <section id="announcements" class="main-body">
+        <h1>New Stuff</h1>
+        <h2>Amateur Radio</h2>
+        <p>
+            Thanks to the ARRL Youth Licensing Grant Program, I was able to get my Technician
+            class amateur radio license for only $5, the cost of the exam. It's great
+            to be able to talk to people over the airwaves, and if you are interested, visit
+            the <a class="link" href="https://arrl.org" target="_blank" rel="noopener noreferrer">ARRL's website</a>
+        </p>
+        <p>
+            My callsign: KR4KGD<br>
+            <a class="link" href="/redirect?id=to-qrz&dest=https://qrz.com/db/KR4KGD" ref="noopener noreferrer" target="_blank">QRZ Database</a><br>
+        </p>
+        <h2>Time for college!</h2>
+        <p>
+            I'll be attending the University of Florida Class of 2030 for Electrical and Computer Engineering.
+            Go Gators!<br>
+        </p>
+    </section>
+
+    <section id="tech-trouble" class="main-body">
+        <h2>Possible tech trouble?</h2>
+        <p>
+            Need some IT/computer help? I might be able to assist. Just send me an email. I can help you fix your printers, computers,
+            TVs, etc. Even if you want tips on <em>hosting</em> a website of your own. I've got a lot of experience from 
+            troubleshooting my own things :). Also, I'm certified in Python and Java! <a href="/tech/" class="link">Click me</a>
+        </p>
+    </section>
+    
+    <section id="end-footer" class="main-body">
+        <p style="text-align:center">
+            Don't make <a class="link" target="_blank" href="/lemons">lemonade</a>. Made with ❤️ by Brian<br>
+            <a class="link" href="#contact-list">Contact</a> |
+            <a class="link" href="/privacy-policy">Privacy Policy</a><br>
+            <a class="link" onclick="restoreMessage()" href="javascript:void(0);">Maintenance message</a><br>
+        </p>
+    </section>
+
+    </div>
+
+<script src="/maint-button.js"></script>
+</body>
+</html>

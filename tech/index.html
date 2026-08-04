@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brian's Tech Help</title>
+    <link rel="icon" href="/assets/computer.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Dark Mode Toggle -->
+    <button id="theme-toggle" class="icon-btn" aria-label="Toggle dark mode">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 1 0 9 9 1 1 0 1 0-2 0 7 7 0 1 1-14 0 1 1 0 1 0 2 0"/></svg>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">Brian</div>
+        <ul class="nav-links">
+            <li><a class="active" href="/">brian.borbath.com</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="gradient-text">Need Tech Help?</h1>
+            <p class="subtext">Providing local assistance for free/low cost in IT help, repair, and advice.</p>
+        </div>
+        <div class="hero-visual">
+            <canvas id="hero-canvas"></canvas>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section features-section">
+        <h2 class="section-title">Features</h2>
+        <div class="features-grid">
+            <article class="feature-card">
+                <div class="feature-icon">🚀</div>
+                <h3>Fast</h3>
+                <p>Driven by passion to help!</p>
+            </article>
+            <article class="feature-card">
+                <div class="feature-icon">🖨️</div>
+                <h3>For All Devices</h3>
+                <p>Computers, Phones, TVs, Printers, Internet, Security, you name it!</p>
+            </article>
+            <article class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>Responsive</h3>
+                <p>Knowledge in Windows, Linux, and Android. Can also assist with Apple devices.</p>
+            </article>
+            <article class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>Secure & Reliable</h3>
+                <p>No need to worry about stolen information/data on your devices by large corporations!</p>
+            </article>
+            <article class="feature-card">
+                <div class="feature-icon">🏠</div>
+                <h3>Local or In-Person</h3>
+                <p>I can take your devices for a quick time, or I can come to you if local!</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <h2 class="section-title">About Me</h2>
+        <p class="about-text">
+            I've helped neighbors and family with their devices, and I want to help you too! I have experience 
+            in electrical engineering, computer science, and AI. I also have knowledge in data recovery, software installation, 
+            troubleshooting, and hardware installation. Best part? I'll do it at a low price compared to professional services.<br>
+            <em>Disclaimer: I am of course not licensed/insured in any way, so even though I know what I am doing, there is 
+            always the possibility of damage.</em>
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Code written by Brian &amp; Qwen.</p>
+            <nav class="footer-nav">
+                <a href="/">Home</a> | 
+                <a href="https://lmstudio.ai" ref="noopener noreferrer" target="_blank">LM Studio</a> | 
+                <a href="https://huggingface.co/Jackrong/Qwen3.5-9B-Claude-4.6-Opus-Reasoning-Distilled-GGUF" ref="noopener noreferrer" target="_blank">Qwen-3.5</a>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal-overlay" class="modal-overlay hidden">
+        <div class="modal-content">
+            <h3>Welcome to Nexus!</h3>
+            <p>You've clicked the CTA button. We're excited to have you here!</p>
+            <button id="modal-close" class="btn-secondary">Close</button>
+        </div>
+    </div>
+
+    <!-- Success Message -->
+    <div id="success-message" class="hidden">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.41 1.41L9 19 21.17 7.83 19.76 6.42 9 17.17z"/></svg>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

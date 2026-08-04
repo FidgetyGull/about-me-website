@@ -1,0 +1,18 @@
+body {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: lemonchiffon;
+    min-width:400px;
+    max-width: 60%;
+}
+
+#main-content h2 {
+    color: blue;
+}
+
+#main-content h3 {
+    color: red;
+}
+
+#footnote {
+    font-size: 10px;
+}

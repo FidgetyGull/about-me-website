@@ -1,0 +1,58 @@
+/* Contains styles of default error pages */
+
+body {
+    font-family: "Georgia", serif;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+}
+
+h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+h2 { /* Only used in some cases */
+    font-size: 35px;
+    font-style: italic;
+}
+
+p {
+    font-size: 20px;
+    color: gray;
+    margin-bottom: 20px;
+}
+
+ul {
+    text-align: left;
+    font-size: 20px;
+    color: gray;
+}
+
+ul.warn {
+    list-style-type: square;
+}
+
+li.warn::marker {
+    color:red;
+}
+
+a.link {
+text-decoration: none;
+color: green;
+}
+
+a.link:visited {
+color: blue;
+}
+
+a.link:hover {
+background-color: rgba(0, 0, 0, 0.08);
+}
+
+/* Fix scaling issues on mobile */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
