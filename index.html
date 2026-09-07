@@ -1,95 +1,267 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <!--Utilizing google fonts for monospace code font-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css">
-    <link rel="icon" href="/assets/home.svg" type="image/svg+xml">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width", initial-scale="1.0">
-    <title>Homepage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#faf9f6">
+    <title>Brian Borbath | Electrical Engineering Portfolio</title>
+    <meta name="description" content="Brian Borbath is a first-year Electrical Engineering student at the University of Florida interested in semiconductors, electronics, RF, and hands-on engineering projects.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Brian Borbath | Electrical Engineering Portfolio">
+    <meta property="og:description" content="First-year Electrical Engineering student at the University of Florida. Engineering projects, technical interests, and leadership experience.">
+    <meta property="og:url" content="https://brian.borbath.com">
+    <!-- TODO: <meta property="og:image" content=""> -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/home.svg" type="image/svg+xml">
 </head>
-<body>
-    <div class="info-cards">
-
-    <section id="maint-notice" class="main-body">
-        <button class="close-btn">&times;</button>
-        <div class="content">
-            <h1>Hi There!</h1>
-            <p>
-                This website is going under a lot of maintenance and changes. At any time, things might break or be changed. Check 
-                back frequently to see changes! If you find any problems, feel free to contact me. NOTE: If the website appears 
-                broken, try emptying browser cache. (windows: ctrl+shift+delete -> check cached images and files -> delete)
-            </p>
+<body id="top">
+    <div id="css-warning">Oops! The stylesheet didn't load correctly. Try reloading or clearing your cache.</div>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="site-name" href="#top">Brian Borbath</a>
+            <nav aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a class="resume-link" href="resume/">Resume</a></li>
+                </ul>
+            </nav>
         </div>
-    </section>
+    </header>
 
-    <section id="hello-world" class="main-body">
-        <h1>Hello!</h1>
-        <main>
-        <p>Hi, I'm Brian Borbath! Welcome to my webpage. Feel free to check by at any
-            time for updated content. There won't be any ads!
-        </p>
-    </main>
-        <section id="contact-list">
-            <h2>Contacts</h2>
-            <p style="line-height: 30px;">
-                <img class="contact-ico" src="/assets/email.png" height="25" width="25">
-                Email: <a class="link" href="mailto:brian.borbath@gmail.com">brian.borbath@gmail.com</a><br>
-                <img class="contact-ico" src="/assets/in-logo.png" height="25" width="25">
-                LinkedIn: <a class="link" href="https://www.linkedin.com/in/brian-borbath-7a1637389/" target="_blank" rel="noopener noreferrer">Here</a><br>
-                <img class="contact-ico" src="/assets/location.png" height="25" width="25"> Viera, FL<br>
-                <img class="contact-ico" src="/assets/github-logo.svg" height="25" width="25">
-                GitHub: <a class="link" href="https://github.com/FidgetyGull" taget="_blank" rel="noopener noreferrer">Here</a>
-            </p>
+    <main class="container" id="main-content" tabindex="-1">
+        <section class="intro" aria-labelledby="intro-title">
+            <div>
+                <p class="eyebrow">Electrical engineering portfolio</p>
+                <h1 id="intro-title">Brian Borbath</h1>
+                <p class="intro-role">Electrical Engineering Student<br>University of Florida</p>
+                <p class="intro-summary">I'm a first-year student with a particular interest in semiconductor technology. I enjoy hands-on work with electronics and computer systems, and exploring how things work through programming and amateur radio.</p>
+                <ul class="link-list" aria-label="Resume and profiles">
+                    <li><a class="button-link" href="resume/">Resume</a></li>
+                    <li><a href="https://github.com/FidgetyGull" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/brian-borbath" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a href="mailto:brian.borbath@gmail.com">Email</a></li>
+                </ul>
+            </div>
+            <aside class="intro-note" aria-label="At a glance">
+                <dl>
+                    <dt>Education</dt>
+                    <dd>University of Florida<br>Class of 2030</dd>
+                    <dt>Primary interest</dt>
+                    <dd>Semiconductor technology</dd>
+                    <dt>On the air</dt>
+                    <dd><a href="https://qrz.com/db/KR4KGD" target="_blank" rel="noopener noreferrer">KR4KGD</a> · Technician</dd>
+                </dl>
+            </aside>
         </section>
-    </section>
 
+        <section class="portfolio-section" id="about" aria-labelledby="about-title">
+            <header class="section-heading">
+                <h2 id="about-title">About</h2>
+            </header>
+            <div class="section-content about-copy">
+                <p>I'm studying Electrical Engineering at the University of Florida and building hands-on technical experience alongside my coursework. Semiconductors are my current focus of interest; I'm also interested in electronics, embedded and computer systems, RF, and programming.</p>
+                <p>I like technical problems that let me work between hardware and software. Outside the classroom, I participate in Civil Air Patrol and hold a Technician amateur radio license.</p>
+            </div>
+        </section>
 
-    <section id="about-me" class="main-body">
-        <h1>About Me</h1>
-        <p>
-            First-year electrical engineering student at the University of Florida. I'm not sure what my specialty will be yet,
-            but I am gearing towards semiconductors. I enjoy tinkering with electronics and doing a little bit of coding.
-        </p>
-        <p>
-            I participate in <a class="link" href="https://gocivilairpatrol.org" ref="noopener noreferrer" target="_blank">Civil Air Patrol</a> as the Deputy Commander, a
-            volunteer organization focused on leadership, emergency services, character development, and aerospace. Squadron FL-239 by PSFB.
-        </p>
-    </section>
+        <section class="portfolio-section" id="experience" aria-labelledby="experience-title">
+            <header class="section-heading">
+                <h2 id="experience-title">Experience</h2>
+                <p>Leadership &amp; involvement</p>
+            </header>
+            <div class="section-content">
+                <!-- Copy article.entry for another role. Add dates with time elements and location only when confirmed. -->
+                <article class="entry" aria-labelledby="cap-title">
+                    <header class="entry-header">
+                        <div>
+                            <h3 id="cap-title"><a href="https://gocivilairpatrol.org" target="_blank" rel="noopener noreferrer">Civil Air Patrol</a></h3>
+                            <p class="entry-role">Deputy Commander</p>
+                        </div>
+                        <p class="entry-meta">Squadron FL-239 · Florida</p>
+                    </header>
+                    <ul class="detail-list">
+                        <li>Serve in a volunteer leadership role supporting squadron activities and member development.</li>
+                        <li>Participate in leadership and mentoring, emergency-services involvement, and aerospace-related activities.</li>
+                    </ul>
+                    <!-- TODO: Add service dates and specific examples of leadership, mentoring, emergency-services, and aerospace work. Do not imply operational qualifications without confirmation. -->
+                </article>
+                <!-- TODO: Add undergraduate research position once finalized. -->
+                <!-- TODO: Add engineering team or internship entries when confirmed; include organization, role, dates, and 2–4 factual bullets. -->
+            </div>
+        </section>
 
-    <section id="announcements" class="main-body">
-        <h1>New Stuff</h1>
-        <h2>Amateur Radio</h2>
-        <p>
-            Thanks to the ARRL Youth Licensing Grant Program, I was able to get my Technician
-            class amateur radio license for only $5, the cost of the exam. It's great
-            to be able to talk to people over the airwaves, and if you are interested, visit
-            the <a class="link" href="https://arrl.org" target="_blank" rel="noopener noreferrer">ARRL's website</a>
-        </p>
-        <p>
-            My callsign: KR4KGD<br>
-            <a class="link" href="https://qrz.com/db/KR4KGD" ref="noopener noreferrer" target="_blank">QRZ Database</a><br>
-        </p>
-        <h2>Time for college!</h2>
-        <p>
-            I'll be attending the University of Florida Class of 2030 for Electrical and Computer Engineering.
-            Go Gators!<br>
-        </p>
-    </section>
+        <section class="portfolio-section" id="projects" aria-labelledby="projects-title">
+            <header class="section-heading">
+                <h2 id="projects-title">Projects</h2>
+                <p>Systems, software &amp; radio</p>
+            </header>
+            <div class="section-content">
+                <!--
+                CONTENT NOTE: The original files document self-hosting, Apache, Cloudflare,
+                this HTML/CSS website, and a Technician radio license. The more detailed
+                project activities from the redesign brief need confirmation before publication.
+                Draft entries below remain inside comments so visitors see only supported work.
+                Move the thermal study to the first visible project once confirmed.
+                -->
+                <article class="project" aria-labelledby="hosting-title">
+                    <p class="project-category">Systems / Networking</p>
+                    <h3 id="hosting-title">Self-Hosted Website Infrastructure</h3>
+                    <p class="project-description">Hosting and maintaining this personal website, with Apache serving the site and Cloudflare providing performance monitoring.</p>
+                    <p class="project-tools"><strong>Tools:</strong> Apache · Cloudflare · Web hosting</p>
+                    <ul class="detail-list">
+                        <li>Self-host the website using Apache with server logging.</li>
+                        <li>Use Cloudflare Real User Monitoring to understand site performance and page-load behavior.</li>
+                    </ul>
+                    <!-- TODO: Confirm the wider Self-Hosted Server / Networking Infrastructure project before replacing this entry with the draft below. Current hosting details are documented in privacy-policy/index.html. -->
+                </article>
 
-    <section id="end-footer" class="main-body">
-        <p style="text-align:center">
-            Don't make <a class="link" target="_blank" href="/lemons">lemonade</a>. Made with ❤️ by Brian<br>
-            <a class="link" href="#contact-list">Contact</a> |
-            <a class="link" href="/privacy-policy">Privacy Policy</a><br>
-            <a class="link" onclick="restoreMessage()" href="javascript:void(0);">Maintenance message</a><br>
-        </p>
-    </section>
+                <article class="project" aria-labelledby="radio-title">
+                    <p class="project-category">RF / Amateur radio</p>
+                    <h3 id="radio-title">Amateur Radio · KR4KGD</h3>
+                    <p class="project-description">Amateur radio is a hands-on outlet for my interest in RF and over-the-air communication.</p>
+                    <p class="project-tools"><strong>License:</strong> Technician class · Callsign KR4KGD</p>
+                    <ul class="detail-list">
+                        <li>Earned a Technician class amateur radio license through the ARRL Youth Licensing Grant Program.</li>
+                        <li>Use amateur radio to communicate over the air and explore an interest in radio systems.</li>
+                    </ul>
+                    <ul class="link-list project-links">
+                        <li><a href="https://qrz.com/db/KR4KGD" target="_blank" rel="noopener noreferrer">View QRZ profile</a></li>
+                        <li><a href="https://arrl.org" target="_blank" rel="noopener noreferrer">About amateur radio at ARRL</a></li>
+                    </ul>
+                    <!-- TODO: Confirm completed antenna construction/tuning, SWR measurements, VHF/UHF equipment use, and RTL-SDR experiments. Add specific hardware and observations without inventing results. -->
+                </article>
 
-    </div>
+                <article class="project" aria-labelledby="website-title">
+                    <p class="project-category">Software / Web</p>
+                    <h3 id="website-title">Personal Website</h3>
+                    <p class="project-description">A personal site and a place to document my engineering interests, involvement, and projects.</p>
+                    <p class="project-tools"><strong>Tools:</strong> HTML · CSS · GitHub</p>
+                    <ul class="detail-list">
+                        <li>Maintain the site's source files in a GitHub repository.</li>
+                        <li>Organize a static website with a portfolio homepage, supporting pages, and custom error pages.</li>
+                    </ul>
+                    <ul class="link-list project-links">
+                        <li><a href="https://github.com/FidgetyGull" target="_blank" rel="noopener noreferrer">GitHub profile</a></li>
+                    </ul>
+                    <!-- TODO: Add the exact public repository URL when confirmed. -->
+                </article>
 
-<script src="/maint-button.js"></script>
+                <!-- TODO: Confirm these thermal study activities, then publish this article first.
+                <article class="project" aria-labelledby="thermal-title">
+                    <p class="project-category">Thermal testing / Experimental analysis</p>
+                    <h3 id="thermal-title">Raspberry Pi Thermal Performance Study</h3>
+                    <p class="project-description">An experimental comparison of Raspberry Pi thermal behavior across 3D-printed case materials and configurations, with open-air operation as a reference.</p>
+                    <p class="project-tools"><strong>Tools:</strong> Raspberry Pi · Python · 3D printing · ANOVA</p>
+                    <ul class="detail-list">
+                        <li>Designed and 3D-printed test cases to compare material and configuration effects.</li>
+                        <li>Created a repeatable thermal stress-test procedure and Python tools for logging and analysis.</li>
+                        <li>Collected temperature and performance data and performed statistical analysis, including ANOVA.</li>
+                        <li>Evaluated thermal throttling and performance behavior across test conditions.</li>
+                    </ul>
+                </article>
+                -->
+                <!-- TODO: Add the Pi model, materials, test conditions, date, actual results, and confirmed repository/report links. No quantitative results are assumed. -->
+
+                <!-- TODO: Confirm the server stack and work below, then replace the narrower hosting entry.
+                <article class="project" aria-labelledby="server-title">
+                    <p class="project-category">Systems / Networking</p>
+                    <h3 id="server-title">Self-Hosted Server / Networking Infrastructure</h3>
+                    <p class="project-description">Home infrastructure connecting self-hosted services and a VPS, with practical work in service deployment, remote access, and network configuration.</p>
+                    <p class="project-tools"><strong>Tools:</strong> Linux · Windows · Docker · NGINX · OpenVPN · Cloudflare · Jellyfin</p>
+                    <ul class="detail-list">
+                        <li>Administered Linux and Windows systems and deployed services using Docker, including Jellyfin.</li>
+                        <li>Configured a VPS, OpenVPN, and NGINX reverse proxying for access to hosted services.</li>
+                        <li>Managed DNS and Cloudflare configuration and troubleshot CGNAT and networking limitations.</li>
+                    </ul>
+                </article>
+                -->
+
+                <!-- TODO: Add a completed Python, Java, or C/C++ project using this template. Confirm languages before adding them to Skills.
+                <article class="project" aria-labelledby="software-project-title">
+                    <p class="project-category">Software / Programming</p>
+                    <h3 id="software-project-title">PROJECT TITLE</h3>
+                    <p class="entry-meta"><time datetime="YYYY-MM">MONTH YEAR</time></p>
+                    <p class="project-description">Describe the problem and what the program does.</p>
+                    <p class="project-tools"><strong>Tools:</strong> Confirmed languages and tools</p>
+                    <ul class="detail-list">
+                        <li>Describe an implementation contribution you made.</li>
+                        <li>Describe how you tested it or what you learned.</li>
+                    </ul>
+                    <ul class="link-list project-links">
+                        <li><a href="REPOSITORY_URL" target="_blank" rel="noopener noreferrer">Source on GitHub</a></li>
+                        <li><a href="PROJECT_PAGE_URL">Project notes</a></li>
+                    </ul>
+                    <figure>
+                        <img src="assets/PROJECT_IMAGE" alt="Describe the actual hardware or software shown" width="1200" height="800" loading="lazy">
+                        <figcaption>Explain what this image demonstrates. Replace dimensions with the image's actual size.</figcaption>
+                    </figure>
+                </article>
+                -->
+            </div>
+        </section>
+
+        <section class="portfolio-section" id="skills" aria-labelledby="skills-title">
+            <header class="section-heading">
+                <h2 id="skills-title">Skills</h2>
+                <p>Current hands-on experience</p>
+            </header>
+            <div class="section-content">
+                <dl class="skills-list">
+                    <div>
+                        <dt>Web &amp; tools</dt>
+                        <dd>HTML, CSS, GitHub</dd>
+                    </div>
+                    <div>
+                        <dt>Systems &amp; hosting</dt>
+                        <dd>Website self-hosting, Apache, Cloudflare</dd>
+                    </div>
+                    <div>
+                        <dt>Electronics &amp; radio</dt>
+                        <dd>Electronics tinkering, amateur radio operation (Technician class)</dd>
+                    </div>
+                    <div>
+                        <dt>Leadership</dt>
+                        <dd>Squadron leadership, mentoring, Civil Air Patrol involvement</dd>
+                    </div>
+                </dl>
+                <!-- TODO: Confirm Python, Java, C/C++, soldering, prototyping, antenna testing, SDR, 3D printing, Linux/Windows administration, Docker, NGINX, OpenVPN, DNS, and Git before listing as skills. Tie additions to specific projects. -->
+            </div>
+        </section>
+
+        <section class="portfolio-section contact-section" id="contact" aria-labelledby="contact-title">
+            <header class="section-heading">
+                <h2 id="contact-title">Contact</h2>
+            </header>
+            <div class="section-content">
+                <p>I'm interested in undergraduate electrical engineering internships and opportunities to gain hands-on experience. Email is the best way to reach me.</p>
+                <dl class="contact-details">
+                    <dt>Email</dt>
+                    <dd><a href="mailto:brian.borbath@gmail.com">brian.borbath@gmail.com</a></dd>
+                    <dt>LinkedIn</dt>
+                    <dd><a href="https://www.linkedin.com/in/brian-borbath" target="_blank" rel="noopener noreferrer">Brian Borbath</a></dd>
+                    <dt>GitHub</dt>
+                    <dd><a href="https://github.com/FidgetyGull" target="_blank" rel="noopener noreferrer">Brian Borbath</a></dd>
+                    <dt>Resume</dt>
+                    <dd><a href="resume/">View resume</a></dd>
+                </dl>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>Designed and built by Brian Borbath.</p>
+            <div class="footer-links">
+                <a href="privacy-policy/">Privacy policy</a>
+                <a href="lemons/">A note on lemons</a>
+                <a href="#top">Back to top</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
