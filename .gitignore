@@ -2,8 +2,4 @@
 .vscode/
 .git/
 
-# hidden webpages
-logs/
-robots.txt
-page/
-redirect/
+README.md
