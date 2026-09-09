@@ -104,6 +104,32 @@ h3 { margin-bottom: 0.6rem; font-size: 1.18rem; font-weight: 650; line-height: 1
 .footer-inner p { margin: 0; }
 .footer-links { display: flex; flex-wrap: wrap; gap: 1.5rem; }
 
+/* Individual project pages; duplicate projects/template.html to create a page. */
+.project-detail { overflow-wrap: anywhere; }
+.project-detail-heading { padding-block: clamp(2rem, 5vw, 3.5rem) 2rem; }
+.project-facts { margin-top: 2rem; }
+.project-figure { margin: 1.5rem 0; break-inside: avoid; }
+.project-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+}
+.project-figure figcaption { margin-top: 0.6rem; color: var(--muted); font-size: 0.85rem; }
+.project-cover { margin: 0 0 3rem; }
+.project-image-placeholder {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 3 / 2;
+  padding: 1.5rem;
+  border: 1px dashed var(--line);
+  background: var(--surface);
+  color: var(--muted);
+  text-align: center;
+}
+.project-cover .project-image-placeholder { aspect-ratio: 16 / 9; }
+.project-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+
 /* Resume page shares the portfolio's navigation, typography, and palette. */
 .resume-page { padding-block: clamp(2rem, 5vw, 3.5rem); }
 .resume-heading { margin-bottom: 2rem; }
@@ -147,6 +173,7 @@ h3 { margin-bottom: 0.6rem; font-size: 1.18rem; font-weight: 650; line-height: 1
   .portfolio-section { grid-template-columns: minmax(0, 1fr); gap: 1.2rem; padding-block: 2.25rem; }
   .section-heading p { margin-bottom: 0; }
   .skills-list { grid-template-columns: minmax(0, 1fr); gap: 1.25rem; }
+  .project-gallery { grid-template-columns: minmax(0, 1fr); gap: 0; }
   .contact-details { grid-template-columns: 4.5rem minmax(0, 1fr); gap: 0.6rem 0.5rem; font-size: 0.9rem; }
 }
 @media print {
