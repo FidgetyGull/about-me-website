@@ -106,12 +106,15 @@ h3 { margin-bottom: 0.6rem; font-size: 1.18rem; font-weight: 650; line-height: 1
 
 /* Individual project pages; duplicate projects/template.html to create a page. */
 .project-detail { overflow-wrap: anywhere; }
+.project-detail .section-heading h2 {
+  overflow-wrap: normal;
+}
 .project-detail-heading { padding-block: clamp(2rem, 5vw, 3.5rem) 2rem; }
 .project-facts { margin-top: 2rem; }
 .project-figure { margin: 1.5rem 0; break-inside: avoid; }
 .project-figure img {
   display: block;
-  width: 100%;
+  max-width: 100%;
   height: auto;
   border: 1px solid var(--line);
 }

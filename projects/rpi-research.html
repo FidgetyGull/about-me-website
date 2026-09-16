@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#faf9f6">
-    <title>[Project title] | Brian Borbath</title>
+    <title>Raspberry Pi Thermal Research | Brian Borbath</title>
     <meta name="description" content="[A brief, factual summary of the project and your contribution.]">
     <!-- TODO: Remove noindex from your completed project page before publishing. -->
     <meta name="robots" content="noindex">
@@ -45,33 +45,33 @@
         <article class="project-detail" aria-labelledby="project-title">
             <header class="project-detail-heading">
                 <p><a href="../#projects">Back to projects</a></p>
-                <p class="eyebrow">[Project category]</p>
-                <h1 id="project-title">[Project title]</h1>
-                <p class="intro-summary">[Summarize the project in one or two sentences: what it does, the problem it addresses, and your contribution.]</p>
+                <p class="eyebrow">Research · Embedded Systems</p>
+                <h1 id="project-title">Raspberry Pi Thermal Performance Research</h1>
+                <p class="intro-summary">Designed and conducted an experimental investigation evaluating whether 3D-printed cases could improve 
+                    the thermal performance of a Raspberry Pi running AI workloads. </p>
                 <dl class="skills-list project-facts">
                     <div>
-                        <dt>Dates / status</dt>
-                        <dd>[When you worked on the project and its current status]</dd>
-                    </div>
-                    <div>
-                        <dt>My role</dt>
-                        <dd>[Your responsibilities; identify collaborators if applicable]</dd>
-                    </div>
-                    <div>
-                        <dt>Tools &amp; technologies</dt>
-                        <dd>[Hardware, software, materials, and tools actually used]</dd>
+                        <dt>About</dt>
+                        <dd>2026 Capstone Self-Project</dd>
                     </div>
                     <div>
                         <dt>Focus</dt>
-                        <dd>[Engineering concepts or questions explored]</dd>
+                        <dd>Passive heat exchange</dd>
+                    </div>
+                    <div>
+                        <dt>Tools &amp; technologies</dt>
+                        <dd>Raspberry Pi, Python, 3D Printing</dd>
+                    </div>
+                    <div>
+                        <dt>Paper</dt>
+                        <dd><a href="#resources-title">Project Resources</a></dd>
                     </div>
                 </dl>
             </header>
 
             <figure class="project-figure project-cover">
-                <div class="project-image-placeholder" role="img" aria-label="Placeholder for the main project image">[Main project image]</div>
-                <img src="/assets/projects/rpi-research/sample.jpg" alt="[Describe what the image shows]" width="1200" height="800">
-                <figcaption>[Caption: identify the hardware, setup, or software shown and explain why it matters.]</figcaption>
+                <img src="/assets/projects/rpi-research/black-case.jpg" alt="Raspberry Pi in black carbon-fiber case" width="600" height="400" loading="lazy">
+                <figcaption>Raspberry Pi enclosed with a custom 3D-printed carbon fiber PLA case with peripherals attached.</figcaption>
             </figure>
 
             <section class="portfolio-section" aria-labelledby="overview-title">
@@ -79,26 +79,11 @@
                     <h2 id="overview-title">Overview</h2>
                 </header>
                 <div class="section-content">
-                    <p>[Explain the motivation, problem, and intended outcome. Give enough context for someone unfamiliar with the project.]</p>
-                    <p>[Describe the scope and constraints, such as available equipment, time, cost, or design requirements.]</p>
-                </div>
-            </section>
-
-            <section class="portfolio-section" aria-labelledby="approach-title">
-                <header class="section-heading">
-                    <h2 id="approach-title">Design &amp; approach</h2>
-                </header>
-                <div class="section-content">
-                    <p>[Describe how the system or experiment works. Explain the major components and how they relate to one another.]</p>
-                    <ul class="detail-list">
-                        <li>[A design decision, why you made it, and the tradeoff involved]</li>
-                        <li>[Another decision or an alternative you considered]</li>
-                    </ul>
-                    <figure class="project-figure">
-                        <div class="project-image-placeholder" role="img" aria-label="Placeholder for a diagram or test setup image">[Diagram or test setup image]</div>
-                        <!-- <img src="../assets/PROJECT_DIAGRAM.png" alt="[Describe the diagram or setup]" width="1200" height="800" loading="lazy"> -->
-                        <figcaption>[Caption: explain the components, connections, or experimental conditions shown.]</figcaption>
-                    </figure>
+                    <p>For my senior capstone project in high school, I really wanted to do something engineering-related rather than the traditional psychology route.</p>
+                    <p>A large issue in today's AI-driven society is the heat produced by data centers. I wondered, is there a way to get edge devices to 
+                        perform efficiently in an area where water or forced-air cooling is not possible?</p>
+                    <p>By combining a Raspberry Pi and thermally conductive 3D printing filament (carbon-fiber filled), I planned to see whether a case could
+                        prevent the Raspberry Pi from throttling under load, while also maintaining a protective casing and a stylish look.</p>
                 </div>
             </section>
 
@@ -107,22 +92,21 @@
                     <h2 id="implementation-title">Implementation</h2>
                 </header>
                 <div class="section-content">
-                    <p>[Describe what you personally built, programmed, configured, or tested. Distinguish your work from other contributors' work.]</p>
+                    <p>My project was broken down into a couple of parts.</p>
                     <ol class="detail-list">
-                        <li>[First substantial step and relevant technical details]</li>
-                        <li>[Next step, including a challenge and how you addressed it]</li>
-                        <li>[Integration or verification step]</li>
+                        <li>Researching previous work on thermal management to ensure my project was unique and feasible.</li>
+                        <li>Designing and 3D printing cases of different colors and materials.</li>
+                        <li>Automation using a Python script to both collect temperature data, graph it, and conduct quantitative analysis.</li>
+                        <li>Written and oral presentation as a final product.</li>
                     </ol>
                     <!-- Duplicate a figure to add more images; the gallery stacks on small screens. -->
                     <div class="project-gallery">
                         <figure class="project-figure">
-                            <div class="project-image-placeholder" role="img" aria-label="Placeholder for a build detail image">[Build detail image]</div>
-                            <!-- <img src="../assets/PROJECT_DETAIL.jpg" alt="[Describe the detail shown]" width="1200" height="800" loading="lazy"> -->
-                            <figcaption>[Caption: identify the detail and explain your work on it.]</figcaption>
+                            <img src="/assets/projects/rpi-research/white-case.jpg" alt="black raspberry pi case" width="1200" height="800" loading="lazy">
+                            <figcaption>Same Pi with non carbon fiber case in white.</figcaption>
                         </figure>
                         <figure class="project-figure">
-                            <div class="project-image-placeholder" role="img" aria-label="Placeholder for another project image">[Additional project image]</div>
-                            <!-- <img src="../assets/PROJECT_PROCESS.jpg" alt="[Describe the process shown]" width="1200" height="800" loading="lazy"> -->
+                            <img src="/assets/projects/rpi-research/desktop-view.jpg" alt="[Describe the process shown]" width="1200" height="800" loading="lazy">
                             <figcaption>[Caption: explain the stage of the build or process shown.]</figcaption>
                         </figure>
                     </div>
@@ -134,12 +118,13 @@
                     <h2 id="results-title">Testing &amp; results</h2>
                 </header>
                 <div class="section-content">
-                    <p>[Explain the test procedure, equipment, and conditions. Describe how you checked that the project worked.]</p>
-                    <p>[Report actual observations or measured results. Include units and relevant limitations; do not invent measurements.]</p>
+                    <p>To measure my results, I timed how long it would take for the Raspberry Pi to reach a "throttled" state (>80C) for each subject, repeating trials for precision.</p>
+                    <p>According to the ANOVA analysis, using the carbon-fiber case actually did improve the heat transfer from the Raspberry Pi to the surrounding air compared to an open-air 
+                        subject and a normal PLA subject.
+                    </p>
                     <figure class="project-figure">
-                        <div class="project-image-placeholder" role="img" aria-label="Placeholder for a results chart or screenshot">[Results chart or screenshot]</div>
-                        <!-- <img src="../assets/PROJECT_RESULTS.png" alt="[Summarize the result shown, including the main finding]" width="1200" height="800" loading="lazy"> -->
-                        <figcaption>[Caption: identify what was measured or demonstrated and under what conditions.]</figcaption>
+                        <img src="/assets/projects/rpi-research/results.png" alt="Table showing ANOVA output" width="1200" height="800" loading="lazy">
+                        <figcaption>Single Factor ANOVA as outputted by Python script.</figcaption>
                     </figure>
                 </div>
             </section>
@@ -149,24 +134,23 @@
                     <h2 id="lessons-title">What I learned</h2>
                 </header>
                 <div class="section-content">
-                    <p>[Describe what you learned, what did not work as expected, and how your understanding changed.]</p>
-                    <p>[Optional: identify an unresolved limitation or future improvement. Clearly distinguish planned work from completed work.]</p>
+                    <p>I really loved doing this project, and I got a lot of experience of how research is professional done. Also, I got hands-on experience in 3D printer design 
+                        and material science!
+                    </p>
+                    <p>I got a 5/5 on the exam! (<a href="https://apstudents.collegeboard.org/about-ap-scores/score-distributions/ap-research" target="_blank" rel="noopener noreferrer">17%</a> of test takers)</p>
                 </div>
             </section>
 
-            <!-- Optional: uncomment once you have real resource URLs, or remove this section.
             <section class="portfolio-section" aria-labelledby="resources-title">
                 <header class="section-heading">
                     <h2 id="resources-title">Resources</h2>
                 </header>
                 <div class="section-content">
                     <ul class="link-list">
-                        <li><a href="REPOSITORY_URL" target="_blank" rel="noopener noreferrer">Source on GitHub</a></li>
-                        <li><a href="REPORT_URL" target="_blank" rel="noopener noreferrer">Project report (PDF)</a></li>
+                        <li><a role="link" aria-disabled="true">Project report (PDF) Coming Soon</a></li>
                     </ul>
                 </div>
             </section>
-            -->
         </article>
     </main>
 
