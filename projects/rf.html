@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#faf9f6">
+    <title>RF Experimentation | Brian Borbath</title>
+    <meta name="description" content="My RF antennas and experiments">
+    <!-- TODO: Remove noindex from your completed project page before publishing. -->
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="../assets/home.svg" type="image/svg+xml">
+</head>
+<body id="top">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="site-name" href="../">Brian Borbath</a>
+            <nav aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="../#about">About</a></li>
+                    <li><a href="../#experience">Experience</a></li>
+                    <li><a href="../#projects">Projects</a></li>
+                    <li><a href="../#skills">Skills</a></li>
+                    <li><a href="../#contact">Contact</a></li>
+                    <li><a class="resume-link" href="../resume/">Resume</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" id="main-content" tabindex="-1">
+        <article class="project-detail" aria-labelledby="project-title">
+            <header class="project-detail-heading">
+                <p><a href="../#projects">Back to projects</a></p>
+                <p class="eyebrow">Experimentation &middot; Hardware</p>
+                <h1 id="project-title">RF</h1>
+                <p class="intro-summary">My antennas, RF work, and amateur radio!</p>
+                <!-- Possibly remove this section?
+                <dl class="skills-list project-facts">
+                    <div>
+                        <dt>Dates / status</dt>
+                        <dd>[When you worked on the project and its current status]</dd>
+                    </div>
+                    <div>
+                        <dt>My role</dt>
+                        <dd>[Your responsibilities; identify collaborators if applicable]</dd>
+                    </div>
+                    <div>
+                        <dt>Tools &amp; technologies</dt>
+                        <dd>[Hardware, software, materials, and tools actually used]</dd>
+                    </div>
+                    <div>
+                        <dt>Focus</dt>
+                        <dd>[Engineering concepts or questions explored]</dd>
+                    </div>
+                </dl>
+            -->
+            </header>
+
+            <!--<figure class="project-figure project-cover">
+                <img src="/assets/projects/radio/quarter-wave.jpg" alt="quarter wave ground plane antenna" width="600" height="400">
+                <figcaption>Quarter-wave ground plane antenna tuned for 2M (146.000 MHz) band.</figcaption>
+            </figure>
+
+            <section class="portfolio-section" aria-labelledby="overview-title">
+                <header class="section-heading">
+                    <h2 id="overview-title">Overview</h2>
+                </header>
+                <div class="section-content">
+                    <p>[Explain the motivation, problem, and intended outcome. Give enough context for someone unfamiliar with the project.]</p>
+                    <p>[Describe the scope and constraints, such as available equipment, time, cost, or design requirements.]</p>
+                </div>
+            </section>-->
+
+            <section class="portfolio-section" aria-labelledby="approach-title">
+                <header class="section-heading">
+                    <h2 id="approach-title">Amateur Radio</h2>
+                </header>
+                <div class="section-content">
+                    <p>Amateur ("Ham") radio is a non-commercial communication and technical hobby that lets licensed operators talk locally, globally, and 
+                        even into space without using cell towers, the internet, or even a lot of electricity.
+                    </p>
+                    <ul class="detail-list">
+                        <li>My current license is Technician. This gives me basic access to many frequencies that I can freely talk on, provided I follow
+                            amateur radio guidelines. The three licenses are Technician, General, and Extra, with each license having harder and harder exams.
+                        </li>
+                        <li>Every ham operator has a callsign, just like an airplane has a tail number. This unique set of letters identifies you 
+                            in a worldwide database by the FCC.
+                        </li>
+                    </ul>
+                    <figure class="project-figure">
+                        <img src="/assets/projects/radio/quarter-wave.jpg" alt="quarter wave ground plane visible from ground view" width="600" height="400 loading="lazy">
+                        <figcaption>Quarter-wave ground plane antenna tuned for 2M (146.000 MHz) band.</figcaption>
+                    </figure>
+                    <ul class="detail-list">
+                        <li>Antennas must be tuned to match the electrical impedance of your transmitter. If the impedance does not match, part of the radio 
+                            frequencies will bounce around the cable rather than being transmitted into the air, which harms the radio transmitter.
+                        </li>
+                        <li>Impedance is measured in ohms, and can be done using a Standard Wave Ratio meter. To tune, you can trim the antenna wires. The above antenna 
+                            was tuned by me.
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="portfolio-section" aria-labelledby="implementation-title">
+                <header class="section-heading">
+                    <h2 id="implementation-title">SDR</h2>
+                </header>
+                <div class="section-content">
+                    <p>Software Defined Radio (SDR) is a communication system where traditional hardware components are replaced with
+                        digital chips controlled by software. It allows you to extend what your antenna can do, without expensive modulators, filters, mixers, etc.</p>
+                    <p>With a cheap Realtek ADC chip-based SDR, I can:</p>
+                    <ol class="detail-list">
+                        <li>Listen to single frequencies, like air traffic control, FM/AM radio, and standard voice channels.</li>
+                        <li>Listen to trunked frequencies, which are digital voice channels with frequencies assigned by a central computer.</li>
+                        <li>Track where satellites are!</li>
+                    </ol>
+                    <!-- Duplicate a figure to add more images; the gallery stacks on small screens. -->
+                    <div class="project-gallery">
+                        <figure class="project-figure">
+                            <img src="/assets/projects/radio/sdr-trunk.jpeg" alt="SDR trunk example" width="1200" height="800" loading="lazy">
+                            <figcaption><a href="https://github.com/DSheirer/sdrtrunk" target="_blank" rel="noopener noreferrer">SDR Trunk</a> operating on an RTL-SDR V4 tuned in to the local public safety "trunked" frequency.</figcaption>
+                        </figure>
+                        <figure class="project-figure">
+                            <img src="/assets/projects/radio/sdr-sharp.jpeg" alt="SDR# example" width="1200" height="800" loading="lazy">
+                            <figcaption>SDR Sharp Example. All quiet on the 2M amateur radio band.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+            <section class="portfolio-section" aria-labelledby="results-title">
+                <header class="section-heading">
+                    <h2 id="results-title">UHF/TV</h2>
+                </header>
+                <div class="section-content">
+                    <p>[Explain the test procedure, equipment, and conditions. Describe how you checked that the project worked.]</p>
+                    <p>[Report actual observations or measured results. Include units and relevant limitations; do not invent measurements.]</p>
+                    <figure class="project-figure">
+                        <img src="/assets/projects/radio/tv.jpeg" alt="uhf tv antenna" width="300" height="200" loading="lazy">
+                        <figcaption>Hand-built TV antenna for local TV stations.</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="portfolio-section" aria-labelledby="lessons-title">
+                <header class="section-heading">
+                    <h2 id="lessons-title">What I learned</h2>
+                </header>
+                <div class="section-content">
+                    <p>[Describe what you learned, what did not work as expected, and how your understanding changed.]</p>
+                    <p>[Optional: identify an unresolved limitation or future improvement. Clearly distinguish planned work from completed work.]</p>
+                </div>
+            </section>
+
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>Designed and built by Brian Borbath.</p>
+            <div class="footer-links">
+                <a href="../#projects">Back to projects</a>
+                <a href="../privacy-policy/">Privacy policy</a>
+                <a href="#top">Back to top</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
