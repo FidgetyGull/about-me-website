@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d1117">
+  <title>Happy Birthday · ESP32 C++ | Brian Borbath</title>
+  <link rel="icon" href="../../home.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css">
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: #0d1117;
+      color: #e6edf3;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    main {
+      width: min(1120px, calc(100% - 3rem));
+      margin: 3rem auto;
+    }
+
+    a { color: #9bc9ff; text-underline-offset: 0.25em; }
+    a:hover { color: #c6e1ff; }
+    :focus-visible { outline: 2px solid #9bc9ff; outline-offset: 5px; }
+
+    .back-link { font-size: 0.875rem; }
+
+    .eyebrow {
+      margin: 2rem 0 0.5rem;
+      color: #9bc9ff;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0 0 0.5rem;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 600;
+      letter-spacing: -0.035em;
+      line-height: 1.2;
+    }
+
+    .description { margin: 0 0 2rem; color: #a8b3c0; }
+
+    .code-panel {
+      overflow: hidden;
+      border: 1px solid #303b49;
+      border-radius: 12px;
+      background: #10161e;
+      box-shadow: 0 16px 48px rgb(0 0 0 / 20%);
+    }
+
+    .code-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem 1rem;
+      padding: 0.875rem 1.5rem;
+      border-bottom: 1px solid #303b49;
+      background: #161e28;
+      font-size: 0.875rem;
+    }
+
+    .code-header h2 { margin: 0; font-size: inherit; font-weight: 600; }
+    .code-header span { color: #a8b3c0; }
+
+    pre {
+      margin: 0;
+      padding: 1.5rem;
+      overflow-x: auto;
+      tab-size: 2;
+    }
+
+    pre:focus-visible { outline-offset: -3px; }
+
+    pre code,
+    pre code.hljs {
+      display: block;
+      overflow: visible;
+      padding: 0;
+      background: transparent;
+      color: #e6edf3;
+      font-family: Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: 0.875rem;
+      line-height: 1.75;
+      white-space: pre;
+    }
+
+    @media (max-width: 600px) {
+      main { width: calc(100% - 2rem); margin-block: 1.5rem; }
+      .code-header, pre { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back-link" href="/projects/embedded-systems.html#hbday-1">&larr; Back to projects</a>
+    <header>
+      <p class="eyebrow">ESP32 project</p>
+      <h1>Happy Birthday</h1>
+      <p class="description">A birthday melody with an OLED display and RGB lighting.</p>
+    </header>
+
+    <section class="code-panel" aria-labelledby="code-title">
+      <div class="code-header">
+        <h2 id="code-title">Source code</h2>
+        <span>C++ / ESP32</span>
+      </div>
+      <pre tabindex="0" aria-label="C++ source code, scroll horizontally to read long lines"><code class="language-cpp">
+// Happy birthday!!
+#include &lt;Wire.h&gt;
+#include &lt;Adafruit_GFX.h&gt;
+#include &lt;Adafruit_SSD1306.h&gt;
+
+#define SCREEN_WIDTH 128
+#define SCREEN_HEIGHT 64
+
+Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &amp;Wire, -1);
+
+const int redPin = 13;
+const int greenPin = 12;
+const int bluePin = 14;
+
+const int buzzerPin = 32;
+
+const int buttonPin = 33;
+int button = 0;
+
+int colorIndex = 0;
+const int NUM_COLORS = 6;
+
+// Initialize happy birthday
+int length = 28; // the number of   notes
+char notes[] = "GGAGcB GGAGdc GGxecBA yyecdc";
+int beats[] = {2,2,8,8,8,16,1,2,2,8,8,8,16,1,2,2,8,8,8,8,16,1,2,2,8,8,8,16};
+int tempo = 200;// time delay between notes 
+
+int colors[NUM_COLORS][3] = {
+  {HIGH, LOW,  LOW},  // Red
+  {LOW,  HIGH, LOW},  // Green
+  {LOW,  LOW,  HIGH}, // Blue
+  {HIGH, HIGH, LOW},  // Yellow
+  {HIGH, LOW,  HIGH}, // Magenta
+  {LOW,  HIGH, HIGH}  // Cyan
+};
+
+void playTone(int tone, int duration) {
+  for (long i = 0; i &lt; duration * 1000L; i+= tone * 2) {
+    digitalWrite(buzzerPin, HIGH);
+    delayMicroseconds(tone);
+    digitalWrite(buzzerPin, LOW);
+    delayMicroseconds(tone);
+  }
+}
+
+void playNote(char note, int duration) {
+  char names[] = {'C', 'D', 'E', 'F', 'G', 'A', 'B', 'c', 'd', 'e', 'f', 'g', 'a', 'b', 'x', 'y'};
+  int tones[] = { 1915, 1700, 1519, 1432, 1275,   1136, 1014, 956,  834,  765,  593,  468,  346,  224, 655 , 715 };
+  int SPEE = 5;
+
+  for (int i = 0; i &lt; 16; i++) {
+    if (names[i] == note) {
+      int newduration = duration/SPEE;
+      playTone(tones[i], newduration);
+    }
+  }
+}
+
+void setColor(int index) {
+  digitalWrite(redPin, colors[index][0]);
+  digitalWrite(greenPin, colors[index][1]);
+  digitalWrite(bluePin, colors[index][2]);
+}
+
+void setup() {
+  pinMode(buzzerPin, OUTPUT);
+  Serial.begin(115200);
+  pinMode(buttonPin, INPUT_PULLUP);
+
+  pinMode(redPin, OUTPUT);
+  pinMode(greenPin, OUTPUT);
+  pinMode(bluePin, OUTPUT);
+
+  if(!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) {
+    Serial.println(F("SSD1306 allocation failed"));
+  }
+  delay(2000);
+
+  // Initialize display
+  display.clearDisplay();
+  display.setTextSize(2);
+  display.setTextColor(WHITE);
+  display.println("HAPPY\nBIRTHDAY!");
+  display.display(); delay(100);
+}
+
+void loop() {
+  button = digitalRead(buttonPin);
+  // put your main code here, to run repeatedly:
+
+  if (button == LOW) {
+    Serial.println("Start");
+
+    for (int i = 0; i &lt; length; i++) {
+      if (notes[i] == ' ') {
+        delay(beats[i] * tempo);
+      } else {
+        setColor(colorIndex);
+        colorIndex = (colorIndex + 1) % NUM_COLORS;
+        playNote(notes[i], beats[i]*tempo);
+      }
+      delay(tempo);
+    }
+
+  }
+}
+</code></pre>
+    </section>
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  <script>
+    if (window.hljs) {
+      hljs.highlightAll();
+    }
+  </script>
+</body>
+</html>
